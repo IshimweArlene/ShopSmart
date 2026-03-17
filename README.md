@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SwiftCart 🍔🛒🚀
 
-## Getting Started
+**SwiftCart** is a modern, user-friendly **multi-category delivery mobile app** prototype that lets users order food, groceries, pharmacy items, pet supplies, liquor, and more — all from one seamless platform.
 
-First, run the development server:
+Currently a **frontend-focused showcase** (no backend integrated yet), it demonstrates clean UI/UX design with intuitive navigation, vibrant category browsing, and appealing restaurant/market listings.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Built with sustainability and convenience in mind — future versions will include eco-friendly restaurant filters, sustainable packaging choices, and carbon footprint insights.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: Frontend Prototype](https://img.shields.io/badge/Status-Frontend%20Prototype-blue)](https://github.com/yourusername/swiftcart)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌟 Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Home Screen
+Clean, inviting home with personalized search, featured categories, and easy bottom navigation.
 
-## Learn More
+<grok-card data-id="5b1cf3" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<grok-card data-id="0f066c" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<grok-card data-id="397218" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
+
+
+### Restaurant / Food Listing Screen
+Browse curated categories (Desserts, Barbecue, Breakfast, Japanese, Healthy) with mouthwatering item previews, ratings, and descriptions.
+
+<grok-card data-id="26f4bd" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
+
+
+
+<grok-card data-id="8c2a7f" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
+
+
+## ✨ Key Features (Frontend Demo)
+
+- **Smart Search Bar** — "What do you want today?" for quick discovery across categories
+- **Multi-Category Navigation** — Restaurants, Market (groceries), Pharmacy, Pet, Stores, Liquor, Coins (rewards?), Travel
+- **Bottom Tab Navigation** — Home, User/Profile, Orders, Help, Settings
+- **Location-aware Browsing** — e.g., "R. Itapauna, 2434" for localized restaurant discovery
+- **Categorized Menus** — Desserts, Barbecue, Breakfast, Japanese, Healthy + more
+- **Rich Item Cards** — Appetizing images, star ratings (e.g., ★4.2–4.8), short descriptions, and highlights
+- **Modern, Leaf-inspired Design** — Green accents symbolizing freshness and future sustainability focus
+
+## 🚀 Live Demo / Preview
+
+Check out the live prototype (hosted on Vercel/Netlify/etc.):  
+**[https://swiftcart.vercel.app](https://swiftcart.vercel.app)**  
+*(Mobile-responsive — best viewed on phone-sized screens or dev tools emulator)*
+
+## 🛠️ Tech Stack
+
+- Framework: Next.js 
+- Styling: Tailwind CSS / plain CSS
+- Icons/UI Library: Lucide Icons, Heroicons, React icons or custom SVGs
+
+- Deployment: Vercel
+
+
+## 📈 Why SwiftCart?
+
+In fast-growing markets like Kigali and beyond, delivery apps need to handle more than just food. SwiftCart aims to be the **one-stop super app** for everyday needs — quick, beautiful, and ready to evolve with eco-conscious features like local/organic prioritization and green packaging options.
+
+## 🤝 Contributing
+
+This is an open project! Contributions welcome:
+- Improve UI/animations
+- Add dark mode
+- Mock more screens (cart, checkout, profile)
+- Suggest sustainability integrations
+
+Fork → Branch → PR!
+
+
+## 📄 License
+
+MIT License — feel free to use, modify, and learn from it.
+
+Made with ❤️ in Kigali.
+
+---
+
+Star ⭐ if you're into clean delivery app UIs!

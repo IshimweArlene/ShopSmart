@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { FaUser, FaLock } from 'react-icons/fa';
+import { FaUser, FaLock, FaArrowRight } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
@@ -38,7 +38,10 @@ export default function Home() {
             </label>
           </div>
 
-          <button className="w-full bg-white text-black py-2 rounded-full font-bold hover:bg-gray-200 transition-all">LOGIN</button>
+          <button className="w-full bg-white text-black py-2 rounded-full font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2 h-10">
+            LOGIN
+            <FaArrowRight />
+          </button>
 
           <p className="text-sm text-white mt-4 cursor-pointer"onClick={onClick}>forgot your password ?</p>
           <button className="text-white mt-12 text-sm border-3 rounded-2xl px-8 py-1 font-black border-white hover:text-blue-200" onClick={handleClick}>SIGN UP</button>
