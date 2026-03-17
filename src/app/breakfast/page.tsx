@@ -3,27 +3,28 @@ import TopBar from "../components/topBar";
 import SearchNav from "../components/searchBar";
 import MealCard from "../components/mealCard";
 import { meals } from "../meals/data";
+
 const BreakFast = () => {
     return (
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-            <div className="relative w-[320px] h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-white">
+        <div className="min-h-screen bg-gray-900 w-full">
+            <div className="relative w-full bg-white min-h-screen overflow-hidden">
               <TopBar />      
               <SearchNav />
-               <div className="px-4 py-2 overflow-y-auto h-[480px]">
-                {meals.map((meal, i) => (
-                    <MealCard
-                    key={i}
-                    name={meal.name}
-                    rating={meal.rating}
-                    description={meal.description}
-                    image={meal.image}
-                    />
-                ))}
+               <div className="px-8 py-4 overflow-y-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                  {meals.map((meal, i) => (
+                      <MealCard
+                      key={i}
+                      name={meal.name}
+                      rating={meal.rating}
+                      description={meal.description}
+                      image={meal.image}
+                      />
+                  ))}
+                </div>
               </div>
             </div>
         </div>
-            
-        
     );
 }
  
