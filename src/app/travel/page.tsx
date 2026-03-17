@@ -1,29 +1,118 @@
 'use client';
-import { FaMagnifyingGlass } from "react-icons/fa6";
-import TopBar from "../components/topBar";
+import { useRouter } from "next/navigation";
 
 const Travel = () => {
+    const router = useRouter();
+    
+    const travelOffers = [
+        { 
+            airline: "LATAM", 
+            discount: "15%", 
+            type: "domestic travel",
+            color: "bg-purple-700",
+            textColor: "text-white",
+            active: true
+        },
+        { 
+            airline: "LATAM", 
+            discount: "35%", 
+            type: "domestic travel",
+            color: "bg-purple-700",
+            textColor: "text-white",
+            active: false
+        },
+        { 
+            airline: "Azul", 
+            discount: "5%", 
+            type: "international travel",
+            color: "bg-white",
+            textColor: "text-blue-600",
+            active: true,
+            border: true
+        },
+        { 
+            airline: "Azul", 
+            discount: "55%", 
+            type: "international travel",
+            color: "bg-white",
+            textColor: "text-blue-600",
+            active: false,
+            border: true
+        },
+        { 
+            airline: "GOL", 
+            discount: "5%", 
+            type: "international travel",
+            color: "bg-white",
+            textColor: "text-orange-500",
+            active: true,
+            border: true
+        }
+    ];
+
     return (
-        <div className="min-h-screen bg-gray-900 w-full">
-          <div className="relative w-full bg-white min-h-screen overflow-hidden">
-            <TopBar />
-            
-            <div className="flex justify-center mt-8">
-              <div className="relative">
-                <input type="text" placeholder="Where do you want to travel today?" className="w-96 h-12 text-gray-900 rounded-2xl px-4 text-sm border-2 border-cyan-400 focus:outline-none"/>
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black text-lg">
-                  <FaMagnifyingGlass/>
+        <div className="min-h-screen bg-white flex items-center justify-center">
+            <div className="relative w-[320px] h-[600px] rounded-3xl overflow-hidden bg-gray-100">
+                {/* Header with Logo */}
+                <div className="flex justify-center pt-8 pb-6">
+                    <div className="flex items-center gap-2">
+                        <div className="w-12 h-12 bg-gradient-to-br from-cyan-300 to-green-300 rounded-full flex items-center justify-center">
+                            <div className="text-white font-bold text-sm">Ci</div>
+                        </div>
+                        <h1 className="text-2xl font-bold text-gray-700">TRAVEL</h1>
+                    </div>
                 </div>
-              </div>
+
+                {/* Travel Offers */}
+                <div className="px-4 py-2 overflow-y-auto h-[450px]">
+                    {travelOffers.map((offer, index) => (
+                        <div key={index} className={`rounded-2xl p-4 mb-4 flex items-center justify-between ${offer.border ? 'border-2 border-gray-200 bg-white' : offer.color}`}>
+                            {/* Left side - Airline logo area */}
+                            <div className="flex items-center gap-4">
+                                <div className={`w-16 h-12 ${offer.color} rounded-lg flex items-center justify-center ${offer.border ? 'border border-gray-200' : ''}`}>
+                                    <span className={`font-bold text-lg ${offer.textColor}`}>
+                                        {offer.airline}
+                                    </span>
+                                </div>
+                                
+                                {/* Offer details */}
+                                <div>
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <div className={`w-2 h-2 rounded-full ${offer.active ? 'bg-cyan-400' : 'bg-gray-400'}`}></div>
+                                        <span className={`font-bold text-lg ${offer.color === 'bg-purple-700' ? 'text-white' : 'text-gray-700'}`}>
+                                            {offer.discount} Discount on {offer.type}
+                                        </span>
+                                    </div>
+                                    <p className={`text-xs ${offer.color === 'bg-purple-700' ? 'text-gray-200' : 'text-gray-500'}`}>
+                                        Valid until December 2024
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            {/* Right side - Redeem button */}
+                            <button className={`px-4 py-2 rounded-full text-xs font-semibold ${
+                                offer.active 
+                                    ? 'bg-cyan-400 text-white' 
+                                    : 'bg-gray-300 text-gray-600'
+                            }`}>
+                                REDEEM
+                            </button>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Bottom Logo */}
+                <div className="flex justify-center mt-4 mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-300 to-green-300 rounded-full flex items-center justify-center">
+                        <div className="text-white font-bold text-lg">Ci</div>
+                    </div>
+                </div>
+
+                {/* Footer Text */}
+                <div className="text-center text-gray-400 text-[8px] px-4">
+                    <p>TRAVEL TERMS AND CONDITIONS • REDEEM POLICY • PRIVACY</p>
+                </div>
             </div>
-            
-            <div className="px-8 py-8">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Travel Services Coming Soon</h2>
-                <p className="text-gray-600">This section is under development.</p>
-              </div>
-            </div>
-          </div>
         </div>
     );
 }
