@@ -48,7 +48,8 @@ Browse curated categories (Desserts, Barbecue, Breakfast, Japanese, Healthy) wit
 ## 🚀 Live Demo / Preview
 
 Check out the live prototype (hosted on Vercel/Netlify/etc.):  
-**[https://swiftcart.vercel.app](https://swiftcart.vercel.app)**  
+**[https://swiftcart-alpha.vercel.app/]
+(https://swiftcart-alpha.vercel.app/)**  
 *(Mobile-responsive — best viewed on phone-sized screens or dev tools emulator)*
 
 ## 🛠️ Tech Stack
